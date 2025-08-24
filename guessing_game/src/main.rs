@@ -21,14 +21,23 @@ fn main() {
 
         // expect is like the failure handling thing
         // this is called shadowing (reuse the guess variable and change it to another type)
-        let guess: u32 = guess.trim().parse().expect("Please type a number!");
+        let guess: u32 = match guess.trim().parse() {
+            // match statement is similar to an if statement ?
+            Ok(num) => num, // if parse can turn the string to a number
+            // the _ is a catch-all values, in this context means we want to catch all error types
+            Err(_) => continue, // otherwise
+        };
 
         println!("you guessed: {}", guess);
 
         match guess.cmp(&num) {
+            // each of these options is called an arm (like a switch statement ?)
             Ordering::Less => println!("Too small!"),
             Ordering::Greater => println!("Too big!"),
-            Ordering::Equal => println!("You win!"),
+            Ordering::Equal => {
+                println!("You win!");
+                break;
+            }
         }
     }
 }
