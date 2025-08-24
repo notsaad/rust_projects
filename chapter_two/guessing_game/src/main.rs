@@ -6,7 +6,6 @@ use rand::Rng;
 fn main() {
     println!("Guess a number!");
     let num = rand::thread_rng().gen_range(1..=100);
-    println!("The secret number is: {}", num);
 
     loop {
         println!("Input your guess:");
