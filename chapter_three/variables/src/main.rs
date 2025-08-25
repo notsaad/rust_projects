@@ -21,4 +21,27 @@ fn main() {
     println!("The value of x is: {}", x);
 
     println!("The value of y is: {}", Y);
+    
+    // Scalar Types in Rust
+    
+    // integers:
+    // unsigned and signed 8bit to 128bit ints
+    
+    // floats:
+    // f32 and f64
+    
+    // bools 
+    
+    // chars: (four bytes in size and represents unicode scalar)
+    // single quotes for a char vs double quotes for a string
+    
+    
+    // Compound Types in Rust
+    
+    // tuples:
+    // group together a number of values with a variety of types
+    // fixed length, once declared cannot grow or shrink in size
+    // let tup: (i32, f64, u8) = (500, 6.4, 1);
+    
+    // arrays: (normal, allocated on the stack, fixed size)
 }
