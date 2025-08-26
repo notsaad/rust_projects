@@ -10,7 +10,10 @@ fn another_function(x: i32) {
 }
 
 fn five() -> i32 {
-    5
+    // 5 ALLOWED
+    // 4+1 ALLOWED
+    // 4 + 1; NOT ALLOWED bc its a statement which doesnt evaluate to a value
+    4 + 1
 }
 
 // rust is an expression based language
