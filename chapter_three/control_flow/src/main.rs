@@ -43,4 +43,28 @@ fn main() {
     for number in (1..4).rev() {
         println!("{}", number);
     }
+    
+    // generate the nth fibonacci number
+    println!("the fifth fib num: {}", fibonacci(8));
+}
+
+// 0 1 1 2 3 5 8 13...
+fn fibonacci(n: i32) -> i32 {
+    if n == 1 {
+        return 0;
+    } else if n == 2 {
+        return 1;
+    }
+    
+    let mut first = 0;
+    let mut second = 1;
+    
+    for _ in 2..n {
+        let temp = first;
+        first = second;
+        second = temp + first;
+    }
+    
+    return second;
+    
 }
