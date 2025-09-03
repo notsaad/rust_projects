@@ -14,5 +14,14 @@ fn main() {
     // capacity is how much space a variable on the heap has been allocated
     // length is how much of that memory the variable is currently using
     
+    print_string(s);
+    
+    // this doesn't work because the above function call takes ownership of s
+    // and after that function is done s is deallocated as it's owner is out of scope
+    // println!("This is after function call: {}", s); this is kinda weird to me
+    
+}
+
+fn print_string(s: String){
     println!("{}", s);
 }
